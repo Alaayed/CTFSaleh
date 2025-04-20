@@ -3,9 +3,6 @@ from typing import List
 
 class Solution:
     def minMoves(self, nums: List[int], limit: int) -> int:
-        compFreq = {}
-        maxFreq = -1
-        # find most frequent complement
         n = len(nums)
         minMoves = n+1
         for i in range ( len(nums) // 2):

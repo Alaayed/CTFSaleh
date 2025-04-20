@@ -1,5 +1,5 @@
-import ast
-from typing import List, Tuple, Dict
+# Removing unused import
+from typing import List, Dict
 
 def rec(k: int, limit: int, index: int, current_sum: int, product: int, isOdd: int, nums: List[int], memo: Dict = {} ) -> int:
     key = (index, current_sum, product, isOdd)

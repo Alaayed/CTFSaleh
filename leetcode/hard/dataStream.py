@@ -1,4 +1,5 @@
 from collections import deque
+from typing import List
 class SummaryRanges:
 
     def __init__(self):
@@ -6,26 +7,32 @@ class SummaryRanges:
 
     def addNum(self, value: int) -> None:
         # New number has 3 cases
-        flag = False
+        left  = deque()
+        right = deque()
         for interval in self.intervals:
-            # 1 Not in an interval
-            if value < interval[0] or value > interval[-1]:
-                continue
-            # 2 Fully in an interval
             if value >= interval[0] and value <= interval[-1]:
-                flag = True
-                break
+                return
             # 3 On the edge of an interval (extends an interval)
-            if value == (interval[0]-1) or value == (interval[-1]+1):
-                if value == (interval[0]-1):
-                    interval.extendLeft(value)
-                else:
-                    interval.extend(value)
-                flag = True
-                break
-
+            if value == (interval[0]-1):
+                interval.appendleft(value)
+                right = interval
+            elif value == (interval[-1]+1):
+                interval.append(value)
+                left = interval
+        # join two deques
+        if left and right:
+            #print(f'left {left} , right {right}')
+            left.append(right[-1])
+            self.intervals.remove(right)
+        elif not left and not right:
+            self.intervals.append(deque([value]))
 
     def getIntervals(self) -> List[List[int]]:
+        ret = []
+        for d in self.intervals:
+            ret.append([d[0],d[-1]])
+        ret.sort()
+        return ret
 
 
 

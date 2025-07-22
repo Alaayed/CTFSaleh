@@ -6,3 +6,5 @@ Normal Forms:
 	-[[3NF]]
 	-[[BCNF]]
 Decomposition of [[FD]]s: [[Decomposition]]
+
+

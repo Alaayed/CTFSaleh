@@ -1,0 +1,4 @@
+- One complete set of actions (defined by the user)
+- Must have atomicity---i.e all of it gets done or none of it does
+- At the end can commit or rollback
+- Viewed by DBMS as a series of reads writes and commits/rollbacks

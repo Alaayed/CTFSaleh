@@ -20,3 +20,4 @@ Refer to [[Key]] for the definition of superkey
 
 ***Note:***
 - Y can also be a candidate key in an FD. Not sure if this is gonna come, but it can happen.
+- 

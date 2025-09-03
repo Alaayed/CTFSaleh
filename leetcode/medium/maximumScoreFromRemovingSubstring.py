@@ -3,7 +3,7 @@ from typing import *
 class Solution:
     def maximumGain(self, s: str, x: int, y: int) -> int:
         def remove_pair(s: str, first: str, second: str, value: int) -> Tuple[str, int]:
-            stack = []
+            stack: Deque = deque()
             score = 0
             for ch in s:
                 if stack and stack[-1] == first and ch == second:

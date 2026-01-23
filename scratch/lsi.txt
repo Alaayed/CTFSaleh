@@ -1,0 +1,7 @@
+d1: students went to the course lectures every day. Good students always come to lectures.
+d2: every student has about five courses.
+d3: courses have either two or three lectures a week.
+d4: the patient went to the clinic; the clinic was open.
+d5: the clinic had about 100 patients; the clinic was full.
+d6: One of the patients was a student.
+student, course, lecture, patient, clinic

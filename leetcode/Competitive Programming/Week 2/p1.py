@@ -12,7 +12,7 @@ def recycle():
             val, start, end= popped[0] , popped[1], i
             score = val * (end - start)
             if score >= solution[-1]:
-                if score != solution or (score == solution[-1] and start < solution[0]):
+                if score != solution[-1] or (score == solution[-1] and start < solution[0]):
                     solution = (start, end, score)
         stack.append( ( b , popped[1] ) )
     end = len(bins)
@@ -21,7 +21,7 @@ def recycle():
         val, start = popped[0] , popped[1]
         score = val * (end - start)
         if score >= solution[-1]:
-            if score != solution or (score == solution[-1] and start < solution[0]):
+            if score != solution[-1] or (score == solution[-1] and start < solution[0]):
                 solution = (start, end, score)
     print(f'{solution[0]+1} {solution[1]} {solution[2]}')
 recycle()

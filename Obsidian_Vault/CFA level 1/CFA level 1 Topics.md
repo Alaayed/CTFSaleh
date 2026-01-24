@@ -20,3 +20,4 @@ n &= \text{Final Year}
 $$
 
 [[Rates and Returns]]
+[[1- Time Value of Money (TVM)]]

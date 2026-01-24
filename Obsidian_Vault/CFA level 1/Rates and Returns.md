@@ -3,3 +3,7 @@
 [[Types of Risk]]
 [[Holding Period Return]]
 [[Average Returns]]
+[[Money-Weighted Return]]
+[[Time-Weighted Return]]
+[[Annualized Return]]
+[[Return Types]]

@@ -39,13 +39,32 @@
             "id": "5fc06dde57f83c4e",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "CFA level 1/Rates and Returns.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Rates and Returns"
+            }
+          },
+          {
+            "id": "1412bdeae2196448",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CFA level 1/Rate and Returns/Return Types.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Return Types"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -98,7 +117,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -193,15 +213,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cfd8978f186b1022",
+  "active": "1412bdeae2196448",
   "lastOpenFiles": [
+    "CFA level 1/Rate and Returns/Return Types.md",
     "CFA level 1/Rates and Returns.md",
-    "CFA level 1/Rate and Returns/Average Returns.md",
-    "CFA level 1/Rate and Returns/Holding Period Return.md",
-    "CFA level 1/Rate and Returns/Required Rate of Return.md",
     "CFA level 1/Rate and Returns/Types of Risk.md",
-    "CFA level 1/Rate and Returns/Time Value of Money (TVM).md",
+    "CFA level 1/Rate and Returns/Average Returns.md",
+    "CFA level 1/Rate and Returns/Annualized Return.md",
+    "CFA level 1/Rate and Returns/Holding Period Return.md",
+    "CFA level 1/Rate and Returns/Internal Rate of Return.md",
+    "CFA level 1/Rate and Returns/Money-Weighted Return.md",
     "CFA level 1/Rate and Returns/Real Risk Free Rate.md",
+    "CFA level 1/Rate and Returns/Required Rate of Return.md",
+    "CFA level 1/Rate and Returns/Time Value of Money (TVM).md",
+    "CFA level 1/Rate and Returns/Time-Weighted Return.md",
+    "Pasted image 20260123173258.png",
+    "Pasted image 20260123172944.png",
+    "Pasted image 20250427135749.png",
+    "Pasted image 20250427141508.png",
     "CFA level 1/CFA level 1 Topics.md",
     "TVM.md",
     "tvm.md",
@@ -219,16 +248,9 @@
     "ExamStudy/CS 354 THE BIG OS/Lecture 2, Module 2--- Threads.md",
     "Learning Theory-18.md",
     "ExamStudy/CS 354 THE BIG OS",
-    "ExamStudy/CS348/Module 10 Concurrency/Transactions.md",
     "ExamStudy/CS 373",
-    "ExamStudy/CS348/Module 6 Normalization/2NF.md",
-    "ExamStudy/CS348/Module 6 Normalization/3NF.md",
-    "ExamStudy/CS348/Module 6 Normalization/Decomposition.md",
-    "ExamStudy/CS348/Module 6 Normalization/FD.md",
     "ExamStudy/MA 416",
     "ExamStudy/CS348/Module 10 Concurrency",
-    "Pasted image 20250427141508.png",
-    "Pasted image 20250427135749.png",
     "Pasted image 20250427140013.png",
     "ExamStudy/CS348",
     "ExamStudy"

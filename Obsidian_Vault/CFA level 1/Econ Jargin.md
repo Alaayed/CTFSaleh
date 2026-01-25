@@ -1,0 +1,3 @@
+- **Coupon**: The periodic interest payments a bond makes, typically the coupon rate (Ex: $(r,FV)=(6\%,100) \rightarrow 6\${}$). In a zero coupon bond, no interest payments are made.
+- **Discount**: Something sold below face value.
+- **Fixed Income Securities** Literally just interest. Two people enter into a contract where the primary cash flow is coupons and principle 

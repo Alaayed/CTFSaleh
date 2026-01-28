@@ -14,20 +14,17 @@ At a high level, the repository contains the following folders:
   cleanup. Expect fast I/O patterns, standard CP tricks, and minimal commentary.
 
 - **cp3/**  
-  Competitive programming practice inspired by the *Competitive Programming 3* (CP3) approach,
-  including drills, problem sets, and personal notes.
+  Competitive programming practice inspired by the *CS 41100* at Purdue,
+  including drills, problem sets, and personal notes on problems im working through for the course.
 
 - **leetcode/**  
-  LeetCode solutions and algorithmic experiments, sometimes overlapping with CP topics.
+  LeetCode solutions and algorithmic experiments, oftentimes overlapping with CP topics.
 
 - **CTFs/**  
   Capture-the-Flag related material: scripts, exploits, challenge solutions, and notes.
-
-- **HW1_CS473/**  
-  Coursework artifacts (from Purdue CS 473), including exploratory or assignment-driven code.
-
+  
 - **kaggle/Titanic/**  
-  Machine learning sandboxing using the classic Titanic dataset.
+  Machine learning sandboxing using the classic Titanic dataset. Rough first approachs.
 
 - **Obsidian_Vault/**  
   Personal notes maintained in Obsidian. This includes finance and economics material
@@ -40,7 +37,7 @@ At a high level, the repository contains the following folders:
 ## Languages and Tools
 
 - **Python** (primary)
-- **C++ / C** (competitive programming and systems-style work)
+- **C++ / C** (competitive programming and for when I'm in the mood)
 - Occasional data science and scripting utilities
 
 ## Usage

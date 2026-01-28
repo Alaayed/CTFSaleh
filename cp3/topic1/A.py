@@ -19,7 +19,7 @@ def create_masks(nums: list[int], factors: list[int]):
     for num in nums:
         mask = 0
         for i,factor in enumerate(factors):
-            if num % factor == 0:
+            if num % factor != 0:
                 mask |= 1 << i
         masks.append(mask)
 # dp[cur][mask] best cost given the first cur elements to cover the mask
@@ -39,5 +39,7 @@ def solve():
             if cur == n:
                 return cost if mask == optMask else float('inf')
             # Two decisions, take the current option or not
-            dp_table[cur][mask] = min( dp(cur+1, mask, cost) , dp (cur, mask | masks[cur], cost + costs[cur]) )
+            if dp_table[cur][mask] != -1:
+	            return dp_table[cur][mask]
+            dp_table[cur][mask] = min( dp(cur+1, mask, cost) , dp (cur+1, mask | masks[cur], cost + costs[cur]) )
 solve()

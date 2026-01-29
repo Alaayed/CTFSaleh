@@ -23,10 +23,23 @@
 
 # TLE on test 16. The swaps just aren't fast enough.
 # I will try reimplementing in c++ to see if that fixes it
+
+# Third attempt
+
+# Turns out that for any value n > m the answer is always yes duo to the pigeonhole principle
+# Case 1: there exists some prefix sum S_i mod m == 0:
+# Just return YES
+# Case 2: There does not exist any prefix sum S mod m == 0:
+# By the pigeonhole principle there must exist some i,j s.t. (S_i == S_j) mod m
+# There for S_i - S_j == 0 mod m
+# Or more concretely, a_i + a_{i+1} ... a_j == 0 mod m
 def solve():
 	n,m = map(int, input().split())
 	# make nums 1 indexed, for simplicity and uniformity
 	nums = [0] + list(map(int, input().split()))
+	if (n > m):
+		print('YES')
+		return None
 	current  = [0 for _ in range(m)]
 	for i in range(1, n+1):
 		previous = current

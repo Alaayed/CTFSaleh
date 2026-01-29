@@ -19,6 +19,7 @@ int main() {
 	rep(i , 0 , n) {
 		cin >> nums[i];
 	}
+	if (n > m) { cout << 'YES' << '\n'; return 0;}
 	// processing
 	vi current(m, 0);
 	vi previous(m,0);
@@ -26,7 +27,7 @@ int main() {
 		swap(current, previous);
 		fill(current.begin(), current.end(), 0);
 		rep(j,0 , m) {// CPP mod operation keeps negative results :(
-			current[j] = max(previous[j] , previous[((j-nums[i-1])+m) % m]);
+			current[j] = max(previous[j] , previous[((j-nums[i-1]) % m+m) % m]);
 			current[j] = max(current[j], nums[i-1] % m == j ? 1 : 0);
 		}
 	}

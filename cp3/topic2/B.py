@@ -1,4 +1,5 @@
-def build_fact(n, mod):
+mod = 10**9 + 7
+def build_fact(n):
     fact = [1] * (n+1)
     for i in range(1, n+1):
         fact[i] = fact[i-1] * i % mod
@@ -10,30 +11,33 @@ def build_fact(n, mod):
         invfact[i] = invfact[i+1] * (i+1) % mod
 
     return fact, invfact
-def choose (n,k,fact,invfact):
-	return fact[n] * invfact[k] * invfact[n-k]
-
-
+fact, invfact = build_fact(2*10**5 + 5)
+def choose (n,k):
+    return (fact[n] * invfact[k] * invfact[n-k]) % mod
 def solve():
     for _ in range(int(input())):
         n,m = map(int, input().split())
         ranges = [list(map(int, input().split())) for i in range(m)]
-        unique_values = set()
-        # Grab unique possible values for value in a
-        for _,_,value in ranges:
-            unique_values.add(value)
-        print(unique_values)
-        # Now, figure out the number of ways that each bit can be set
-        # Issue, you CAN figure out the number of subsets where
-        # bit i is set,
-        # but how do you avoid overcounting?
-        # you find it for the first bit,
-        # (3,3,3,3,3) ()
-        # number of zeros
-        # number of odd arranges of 1
-        odd_arranges = 1000
-        number_zeros = 100
-        ans = odd_arranges * 2** number_zeros
-        # 0 , 0 , 0 , 0 ,0
-        # [0,7,7,0,2]
+        a= [0 for _ in range(n)]
+        for i,j,val in ranges:
+            a[i-1] |= val
+        bits = [0 for _ in range(30)]
+        # Calculate how many times each bit is a one
+        for i in range(30):
+            for e in a:
+                bits[i] += 1 if (e & (1<<i)) != 0 else 0
+        total_contribution = 0
+        for i in range(30):
+            onebits = bits[i]
+            zerobits = n-onebits
+            if onebits > 0: # 2^n-1 odd ways to pick one bits
+                bit_contribution= ((1 << (onebits-1)) * (1 << zerobits)) % mod
+            else:
+                bit_contribution = 0
+            # ith bit contribution 2^i value
+            bit_contribution *= (1 << i)
+            bit_contribution %= mod
+            total_contribution += bit_contribution
+            total_contribution %= mod
+        print(total_contribution)
 solve()

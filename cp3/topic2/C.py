@@ -20,9 +20,18 @@ def possible_permutations(n, fact, invfact):
     # stars are n
     # each one must have AT LEAST 1 n
     # one s at the start, it's fixed
-    # |* ? * ? *
+    # |* ? * ? *|
+    # |* ? * ? * ? *|
+    #|* || * || * || * * * * * * *|
+    # 1 2 3
+    # 4 5 6
+    # 2 4 6
+    # 1 3 5
     for i in range(1, n+1):
-        choose(n-1, i-1, fact, invfact)
+        overcounted_permutations = choose(n-1, i-1, fact, invfact) ** 2
+        overcounted_permutations %= MOD
+        #
+        true_permutations = overcounted_permutations * invfact[]
 
 
 def solve():

@@ -1,21 +1,37 @@
+from bisect import bisect_left
 
-MODN = 10**9 + 7
-def build_fact(n, mod):
-    fact = [1] * (n+1)
-    for i in range(1, n+1):
-        fact[i] = fact[i-1] * i % mod
+MODN = 10 ** 9 + 7
+MAXN = 3000 + 5
 
-    invfact = [0] * (n+1)
-    invfact[n] = pow(fact[n], mod - 2, mod)
 
-    for i in range(n-1, -1, -1):
-        invfact[i] = invfact[i+1] * (i+1) % mod
+def two_powers_mod():
+	powers = [1 for _ in range(MAXN)]
+	for i in range(1, MAXN):
+		powers[i] = (powers[i - 1] << 1) % MODN
+	return powers
 
-    return fact, invfact
-def choose (n,k,fact,invfact):
-	return fact[n] * invfact[k] * invfact[n-k]
+
+powers = two_powers_mod()
+
+
+def in_range_elements(i, j, positions, n):
+	pi, pj = positions[i], positions[j]
+	dx = pj - pi
+	left_elements = bisect_left(positions, pi - dx)
+	right_elements = bisect_left(positions, pj + dx)
+	return left_elements + (n - right_elements)
+
 
 def solve():
-    n,k= 0,0
-    possible_pairs =  4_498_500
-    build_fact(3000,MODN)
+	n = int(input())
+	positions = sorted(list(map(int, input().split())))
+	possible_permutations = 0
+	for i in range(n):
+		for j in range(i + 1, n):
+			in_range = in_range_elements(i, j, positions, n)
+			possible_permutations += powers[in_range]
+			possible_permutations %= MODN
+	print(possible_permutations)
+
+
+solve()

@@ -25,5 +25,9 @@ def betterpermutations(n=5 , sections=5):
 		print(f"Case 3: {permutations}")
 	return permutations
 
-print(betterpermutations(n=5, sections=5))
-
+s= 5
+for r in range(0, s):
+	res = []
+	for c in range(0, s):
+		res.append((r+c) % s + 1)
+	print(f'r,perm : {r} -> {res}')

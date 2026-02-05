@@ -10,6 +10,8 @@ $$\begin{cases}
 \end{cases}$$
 $$PV = \sum _ {i = 1} ^ {N}\frac{FV* r_c}{(1+r_y)^{i}} \;\; + FV *(1+r_y)^{-N} $$
 $$PV = FV(r_c * \frac{1-(1+r_y)^{-N}}{r_y} + (1+r_y)^{-N})$$
+$$PV = FV(r_c * \frac{1 - (1+r_y)^{-N} + r_y(1+r_y)^{-N}}{r_y})$$
+$$PV = FV(r_c * \frac{1 + (r_y- 1)(1+r_y)^{-N}}{r_y})$$
 ### Perpetual Bonds
 Bonds that payout coupons forever
 $$PV = \frac{\text{payment}}{r}$$

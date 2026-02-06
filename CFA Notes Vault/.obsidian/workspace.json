@@ -1,70 +1,55 @@
 {
   "main": {
-    "id": "e4efe267381053d2",
+    "id": "d877de65b4396386",
     "type": "split",
     "children": [
       {
-        "id": "8ad84ee9567b9ad1",
+        "id": "75e96ca6248bd48c",
         "type": "tabs",
         "children": [
           {
-            "id": "cfd8978f186b1022",
+            "id": "0dd9ad740f6e8332",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CFA level 1/Rate and Returns/Average Returns.md",
+                "file": "CFA level 1/Tests/Time Value of Money Test.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Average Returns"
+              "title": "Time Value of Money Test"
             }
           },
           {
-            "id": "3a43dbf381d71417",
+            "id": "2f48a1f506ea0d3d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ExamStudy/CS348/Module 7 Indexes/Index Types.md",
+                "file": "CFA level 1/Time Value of Money/Forward Interest Rates.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Index Types"
-            }
-          },
-          {
-            "id": "5fc06dde57f83c4e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CFA level 1/Rate and Returns/Holding Period Return.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Holding Period Return"
+              "title": "Forward Interest Rates"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "a952f1b6fbba8697",
+    "id": "3c99600e238b3b8d",
     "type": "split",
     "children": [
       {
-        "id": "9a1bdff8fc0336f2",
+        "id": "1bc05ab132df487b",
         "type": "tabs",
         "children": [
           {
-            "id": "1941fdf319a4ac5f",
+            "id": "cd293cb7186e7cd1",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -77,7 +62,7 @@
             }
           },
           {
-            "id": "4fb42ac17545a5ac",
+            "id": "1aedb093eabe59db",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -94,7 +79,7 @@
             }
           },
           {
-            "id": "e4459898d536b055",
+            "id": "73c46703c0ed8d25",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -110,20 +95,20 @@
     "width": 300
   },
   "right": {
-    "id": "73e2b75dee439afc",
+    "id": "7e1f91cad50d3c75",
     "type": "split",
     "children": [
       {
-        "id": "f740f4a529d24965",
+        "id": "67d603ec65aa0a32",
         "type": "tabs",
         "children": [
           {
-            "id": "8743d5b81402ea65",
+            "id": "9f3ff4c1cb384418",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Week 11, November 17-23.md",
+                "file": "CFA level 1/Time Value of Money/1- Time Value of Money (TVM).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,25 +118,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Week 11, November 17-23"
+              "title": "Backlinks for 1- Time Value of Money (TVM)"
             }
           },
           {
-            "id": "6b50fbebe26eaa0b",
+            "id": "4c9e917a8f38a99a",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Week 11, November 17-23.md",
+                "file": "CFA level 1/Time Value of Money/1- Time Value of Money (TVM).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Week 11, November 17-23"
+              "title": "Outgoing links from 1- Time Value of Money (TVM)"
             }
           },
           {
-            "id": "4c211a0a701328df",
+            "id": "7f3ec32e73d0a5f8",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -166,18 +151,18 @@
             }
           },
           {
-            "id": "ae2536829200bc5f",
+            "id": "c8d842ab3d81eca7",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Week 11, November 17-23.md",
+                "file": "CFA level 1/Time Value of Money/1- Time Value of Money (TVM).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Week 11, November 17-23"
+              "title": "Outline of 1- Time Value of Money (TVM)"
             }
           }
         ]
@@ -189,60 +174,28 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
-  "active": "5fc06dde57f83c4e",
+  "active": "0dd9ad740f6e8332",
   "lastOpenFiles": [
-    "CFA level 1/Rate and Returns/Real Risk Free Rate.md",
-    "CFA level 1/Rate and Returns/Required Rate of Return.md",
-    "CFA level 1/Rate and Returns/Return Types.md",
-    "CFA level 1/Rate and Returns/Time-Weighted Return.md",
-    "CFA level 1/Rate and Returns/Types of Risk.md",
-    "CFA level 1/Rate and Returns/Annualized Return.md",
-    "CFA level 1/Rate and Returns/Average Returns.md",
-    "CFA level 1/Rate and Returns/Internal Rate of Return.md",
-    "CFA level 1/Rate and Returns/Holding Period Return.md",
-    "CFA level 1/Rate and Returns/Money-Weighted Return.md",
-    "CFA level 1/Rate and Returns/Rates and Returns.md",
     "CFA level 1/Time Value of Money/Equity Securities.md",
+    "CFA level 1/Tests/Time Value of Money Test.md",
+    "CFA level 1/Time Value of Money/Options Pricing Model.md",
     "CFA level 1/Time Value of Money/Bonds.md",
-    "CFA level 1/Rate and Returns/Untitled.base",
-    "CFA level 1/Rate and Returns/Untitled 1.base",
-    "CFA level 1/Rate and Returns/Untitled 3.base",
-    "CFA level 1/Rate and Returns/Untitled 2.base",
-    "Images/Pasted image 20260123173258.png",
-    "Images/Pasted image 20260123172944.png",
-    "Images/Pasted image 20250427141508.png",
-    "Images/Pasted image 20250427135749.png",
-    "Images",
+    "CFA level 1/Time Value of Money/Cash Flow Additivity.md",
+    "CFA level 1/Time Value of Money/Forward Currency Exchange Rates.md",
     "CFA level 1/Time Value of Money/1- Time Value of Money (TVM).md",
-    "CFA level 1/Time Value of Money",
-    "CFA level 1/Econ Jargin.md",
-    "CFA level 1/Rates and Returns.md",
-    "CFA level 1/Rate and Returns/Time Value of Money (TVM).md",
-    "Pasted image 20260123173258.png",
-    "Pasted image 20260123172944.png",
-    "Pasted image 20250427135749.png",
-    "Pasted image 20250427141508.png",
     "CFA level 1/CFA level 1 Topics.md",
-    "TVM.md",
-    "tvm.md",
-    "Time.md",
-    "CFA level 1/Rate and Returns",
-    "CFA level 1",
-    "Week 11, November 17-23.md",
-    "ExamStudy/CS 373/Lectures.md",
-    "ExamStudy/CS348/Module 10 Concurrency/ACID.md",
-    "ExamStudy/CS348/Module 10 Concurrency/Concurrency.md",
-    "ExamStudy/CS 354 THE BIG OS",
-    "ExamStudy/CS 373",
-    "Pasted image 20250427140013.png"
+    "CFA level 1/Time Value of Money/Forward Interest Rates.md",
+    "Images/Pasted image 20260203131053.png",
+    "Images/Pasted image 20260203123758.png",
+    "CFA level 1/Tests/Untitled"
   ]
 }

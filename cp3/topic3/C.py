@@ -5,50 +5,81 @@
 # we have to recompute the value for all sliding arrays of length >= k
 # make all arrays sparse tables for O(1) max range queries
 # Keep a prefix sum for all values that don't need to be recomputed (all values reachable)
+from collections import Counter, deque
+import heapq
+class MaxSet:
+	def __init__(self):
+		self.h = []
+		self.cnt = Counter()
+	def add(self, x):
+		self.cnt[x] += 1
+		heapq.heappush(self.h,-x)
+	def rem(self, x):
+		self.cnt[x] -= 1
+	def get_max(self):
+		while self.h and self.cnt[-self.h[0]] == 0:
+			heapq.heappop(self.h)
+		if not self.h: return 0
+		return -self.h[0]
 
-class JaggedSparseTable:
-	def __init__(self, a):
-		self.st = [a[:]]
-		n = len(a)
-		k = 1
-		while (1 << k) <= n:
-			prev = self.st[-1]
-			step = 1 << (k - 1)
-			cur = [
-				max(prev[i], prev[i + step])
-				for i in range(n - (1 << k) + 1)
-			]
-			self.st.append(cur)
-			k += 1
+from typing import*
+def generate_events(a, w):
+	"""
+	Given a, generate all 2*l add delete events
+	"""
+	add = []
+	rem = []
+	l = len(a)
+	for i in range(l):
+		add.append([i,a[i]])
+		# the last valid start, then move to ith position
+		rem.append([w-l + i, a[i]])
+	if l != w:
+		add.append( [0, 0] )
+		rem.append( [w-l-1, 0])
+		add.append( [l, 0])
+		rem.append( [w-1,0])
+	add.sort()
+	rem.sort()
+	return deque(add), deque(rem)
+def handle_events(diff: List[int],add: Deque[int], rem: Deque[int]):
+	multiset = MaxSet()
+	prev_idx = 0
+	def range_add(l , r, val): # Helper
+		if l <= r:
+			diff[l]+= val
+			diff[r+1]-= val
+	while add or rem:
+		# [prev_idx ... idx]
+		# values need to be assigned
+		# from prev_idx to idx-1, nothing happened
+		# range update
+		idx = min(add[0][0] if add else len(diff), rem[0][0])
+		range_add(prev_idx, idx-1, multiset.get_max())
+		# Now, time to update the multiset
+		while add and add[0][0] == idx:
+			_, value = add.popleft()
+			multiset.add(value)
+		# Now, update location idx
+		range_add(idx, idx, multiset.get_max())
+		# Now, values that are not valid
+		while rem and rem[0][0] == idx:
+			_, value = rem.popleft()
+			multiset.rem(value)
+		# update prev idx
+		prev_idx = idx+1
 
-	def query(self, l, r, idempotent=True):
-		if idempotent:
-			length = r - l + 1
-			k = length.bit_length() - 1
-			return max(self.st[k][l], self.st[k][r - (1 << k) + 1])
 
 def solve():
 	n,w = map(int,input().split())
-	nums = [list(map(int,input().split()))[1:] for _ in range(n)]
-	nums = sorted(nums, key=lambda x: len(x))
-	tables = [JaggedSparseTable(num) if len(nums) > 2 else None for num in nums]
-	res = []
-	for j in range(w):
-		jth_sum = 0
-		# For the jth column
-		for i in range(n):
-			# contribution of the i'th column
-			arr_len = len(nums[i])
-			l = max(arr_len-(w-j), 0)
-			r = min(j, arr_len-1)
-			if tables[i]: ith_contribution = tables[i].query(l,r)
-			else: ith_contribution = max(nums[i][l:r+1])
-			if ith_contribution < 0:
-				if arr_len - (w-j) < 0:
-					continue
-				if arr_len-1 < j:
-					continue
-			jth_sum += ith_contribution
-		res.append(jth_sum)
-	print(*res)
+	diff = [0] * (w+1)
+	for _ in range(n):
+		num = list(map(int,input().split()))[1:]
+		add: Deque[int]
+		rem: Deque[int]
+		add, rem = generate_events(num, w)
+		handle_events(diff, add, rem)
+	prefix=0
+	print(*[prefix:= prefix + j for j in diff[:len(diff)-1]])
+
 solve()

@@ -1,4 +1,6 @@
 {
   "baseFontSize": 16,
-  "nativeMenus": true
+  "nativeMenus": true,
+  "theme": "obsidian",
+  "cssTheme": "Obsidian gruvbox"
 }

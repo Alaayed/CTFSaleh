@@ -6,7 +6,7 @@ Discounting Cash Flows:
 		- Used rn
 	- Why is money less valuable tomorrow?
 		- Exposed to Inflation and risk
-		- Oppertunity Cost
+		- Opportunity Cost
 		- Cannot be used rn
 $$DCF = \sum_{i=1}^n\frac{CF_i}{(1+r)^i}$$
 Where

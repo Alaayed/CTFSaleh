@@ -89,3 +89,27 @@ struct MCMF {
 		assert(it >= 0); // negative cost cycle
 	}
 };
+
+//mcmf.addEdge(from, to, capacity, cost);
+//MCMF mcmf(N); // N = number of nodes (0-indexed)
+//auto [flow, cost] = mcmf.maxflow(source, sink);
+
+//// Nodes: 0=source, 1..N=workers, N+1..2N=jobs, 2N+1=sink
+//int S = 0, T = 2*N+1;
+//MCMF mcmf(T+1);
+//
+//// Source -> each worker, cap 1, cost 0
+//for (int i = 1; i <= N; i++)
+//    mcmf.addEdge(S, i, 1, 0);
+//
+//// Each job -> sink, cap 1, cost 0
+//for (int j = 1; j <= N; j++)
+//    mcmf.addEdge(N+j, T, 1, 0);
+//
+//// Worker i -> job j with cost[i][j]
+//for (int i = 1; i <= N; i++)
+//    for (int j = 1; j <= N; j++)
+//        mcmf.addEdge(i, N+j, 1, cost[i][j]);
+//
+//auto [flow, cost] = mcmf.maxflow(S, T);
+//// flow == N means perfect matching found
